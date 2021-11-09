@@ -1,38 +1,283 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #f0eee8 inset !important;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input:-webkit-autofill {
+  -webkit-text-fill-color: #78becf !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #f0eee8;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 100px;
+  background: #78becf;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 45px;
+  padding-left: 45px;
+  box-shadow: 5px 5px 10px #bfbfbf;
+}
+
+header div {
+  min-width: 16vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.App {
+  width: 100vw;
+}
+
+main {
+  background: #f0eee8;
+  min-height: 80vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.container-search {
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  width: 430px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  box-shadow: 5px 5px 10px #bfbfbf;
+}
+
+.search input {
+  padding-top: 10px;
+  padding-left: 5px;
+  width: 430px;
+  height: 50px;
+  background-color: #f0eee8;
+  border: 3px solid #78becf;
+}
+
+input{
+  color: #1a9dcd;
+  border: 3px solid #78becf;
+}
+
+button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 35px;
+  height: 30px;
+  background-image: url("../src/btn-search.svg");
+  background-repeat: no-repeat;
+  border: none;
+}
+
+input,
+select:focus {
+  outline-color: #f0eee8;
+  border: none;
+  color: #1a9dcd;
+  border: 3px solid #78becf;
+}
+
+input::placeholder {
+  font-size: 30px;
+  color: #1a9dcd;
+}
+
+li {
+  padding-left: 20px;
+  display: inline;
+  font-size: 26px;
+}
+
+li a {
+  text-decoration: none;
+}
+
+footer {
+  height: 100px;
+  width: 100vw;
+  background: #78becf;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+footer img {
+  width: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer h2 {
+  font-weight: bolder;
+  padding: 30px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.card {
+  margin: 10px;
+  width: 350px;
+  height: 210px;
+  background: rgba(154, 14, 203, 0.85);
+  box-shadow: 5px 5px 10px #bfbfbf;
+}
+
+.card-spell {
+  margin: 10px;
+  width: 300px;
+  height: 200px;
+  background: rgba(220, 20, 60);
+  box-shadow: 5px 5px 10px #bfbfbf;
+}
+
+.card-name-spell {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 10px;
+  justify-content: space-between;
+  border: 2px solid #f0eee8;
+}
+
+.card-info-spell {
+  height: 140px;
+  border: 2px solid #f0eee8;
+}
+
+.card-info-spell ul {
+  padding-top: 10px;
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.card-name {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 10px;
+  justify-content: space-between;
+  border: 2px solid #f0eee8;
+}
+
+.infos {
+  padding-top: 10px;
+  border: 2px solid #f0eee8;
+  padding-bottom: 21px;
+}
+
+.card-name img {
+  width: 40px;
+  height: 50px;
+}
+
+.card-name-spell img {
+  width: 30px;
+  height: 40px;
+}
+
+.card-name h3 {
+  font-size: 26px;
+}
+
+.card-info ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-info ul li {
+  font-size: 16px;
+  padding: 0;
+}
+
+.card-info-spell ul li {
+  font-size: 16px;
+  padding: 0;
+}
+
+.card-life {
+  height: 20px;
+}
+
+.select {
+  margin-left: 10px;
+  width: 100px;
+  height: 50px;  box-shadow: 5px 5px 10px #bfbfbf;
+}
+
+#type-route {
+  height: 50px;
+  width: 100px;
+  color: #1a9dcd;
+  border: 3px solid #78becf;  
+  background-color: #f0eee8;
+}
+
+#Gryffindor {
+  background-color: rgba(227, 48, 48, 0.85);
+}
+
+#Ravenclaw {
+  background: rgba(2, 136, 208, 0.85);
+}
+
+#Slytherin {
+  background: rgba(50, 119, 50, 0.85);
+}
+
+#Hufflepuff {
+  background: #f2cb05;
+}
+
+.card-all {
+  color: #1a9dcd;
+}
+
+#Hex {
+  background: rgba(219, 112, 147);
+}
+
+#Jinx {
+  background: rgba(30, 144, 255);
+}
+
+#Transfiguration {
+  background: rgba(199, 21, 133);
+}
+
+#Curse {
+  background: rgba(106, 90, 205);
+}
+
+#Charm {
+  background: rgba(60, 179, 113);
 }
